@@ -1,0 +1,14 @@
+
+<h1> Platforms </h1>
+
+{% load static %}
+
+<img src="{% static 'visibility/DSC00007.JPG' %}" height="175" width="200">
+<br> <br> <br>
+
+{% for platform in platforms %}
+    <a href="detail/{{ platform.id }}/"> {{ platform.id }} </a> <br>
+    {{ platform.name }} <br>
+    {{ platform.company }} <br>
+    {{ platform.url }} <br>
+{% endfor %}
