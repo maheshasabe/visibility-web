@@ -23,8 +23,14 @@ from readquestions import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
+    path('index.html', views.home, name="home"),
     path('detail/<int:platformId>/', views.details, name="detail"),
-    path('blog/', include('blog.urls')),
+    path('about.html', views.about, name="about"),
+    path('courses.html', views.courses, name="courses"),
+    path('faq.html', views.faq, name="faq"),
+    path('contact.html', views.contact, name="contact"),
+     path('blog.html', views.blog, name="blog"),
+    # path('blog/', include('blog.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

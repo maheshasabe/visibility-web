@@ -8,3 +8,8 @@ class Platforms(models.Model):
     image = models.ImageField(upload_to='readquestions/images')
     url = models.URLField(blank=True)
     company = models.CharField(max_length=200) 
+    description = models.TextField()
+    onboardDate = models.DateField()
+
+    def __str__(self):
+        return self.name
